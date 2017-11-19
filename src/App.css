@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body{
+
 }
 
 .App-logo {
@@ -25,4 +25,36 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+
+a {
+  cursor : pointer;
+}
+
+
+.comment-card{
+  background-color: #eee ;
+  border-radius: 8px;
+  margin-top : 0.5vh;
+  padding :1vw;
+  cursor:pointer;
+  border-style : solid;
+  border-color :  black;
+  border-width :  1px;
+}
+
+.icons-container > i {
+  font-size : 1vw;
+  margin : 2px;
+  padding : 2px;
+  width : 10%;
+  border-width : 1px;
+  border-color : white;
+  border-radius:  10px;
+}
+
+.collapse:hover{
+  background-color : #eaecef;
 }

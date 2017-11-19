@@ -16,7 +16,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--
 
 
@@ -45,5 +45,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+
+    <script>
+        if('serviceWorker' in navigator){
+          window.addEventListener('load',function(){
+            navigator.serviceWorker.register('/sw.js')
+                      .then(function(registration){
+                        console.log('SERVICE WORKER IS REGISTERED SUCCESSFULLY'); 
+                      })
+                      .catch(err=>{
+                        console.warn('SERVICE WORKER FAILED TO REGISTERED',err);
+                      })
+          })
+        }
+
+
+    </script>
   </body>
 </html>

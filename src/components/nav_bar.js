@@ -4,7 +4,6 @@ import {Nav,Navbar ,NavItem,MenuItem,NavDropdown} from 'react-bootstrap/lib';
 class Navigation extends Component {
 
  constructor(props) {
- 	console.log(props);
  	super(props);
  	
  }
