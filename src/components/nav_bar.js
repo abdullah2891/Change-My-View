@@ -23,7 +23,6 @@ class Navigation extends Component {
 		      <Nav>
 		      	{
 		      		this.props.links.map((link, index)=>{
-		      			console.log(link);
 		      			return (<NavItem  eventKey={index} href="#">{link}</NavItem>)
 		      		})
 		      	}

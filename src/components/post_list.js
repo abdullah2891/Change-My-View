@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CardView from  './posts/card_view'; 
 import {PanelGroup,Panel} from 'react-bootstrap/lib';
  
+import {Link} from 'react-router-dom';
+
 
 class PostView extends Component{
 	constructor(props) {
@@ -25,30 +27,28 @@ class PostView extends Component{
 			})
 	}
 
+	navigateComment(link){
+
+	}
+
+
 
 	render(){
+		let subreddit = 'changemyview';
 		return (
 				<div className="container-fluid">
-					<PanelGroup defaultActiveKey="1" accordion>
+					<ul className="list-group">
+					    {
+							this.state.posts.map((post,index)=>{
+								let link = `/comment/${subreddit}/${post.data.id}`;
+								return(			
+										<li className="list-group-item" eventKey={post.data.id}><Link to={link}>{post.data.title}</Link></li>
+									)
+							})
+						}
 
-				    {
-						this.state.posts.map((post,index)=>{
-							return(
-									<Panel 
-										collapsible 
-										header=  {post.data.title} 
-										eventKey= {index}>
-											<CardView 
-												url= {post.data.url}
-												self_text = {post.data.selftext}
-											/>
-										</Panel>
-								)
-						})
-					}
-				 </PanelGroup>	
-
-				</div>
+					</ul>
+				</div>	
 				 
 			);
 	}

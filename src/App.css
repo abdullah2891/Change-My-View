@@ -58,3 +58,21 @@ a {
 .collapse:hover{
   background-color : #eaecef;
 }
+
+
+.reddit-comment{
+  border-left-color: red;
+  border-left-width :  8px;
+}
+
+.reddit-comment-group{
+  margin-left :2vw;
+}
+
+
+.loading-spinner{
+  position :  absolute;
+  top :30vh;
+  left : 30vw;
+  z-index :  1000;
+}
