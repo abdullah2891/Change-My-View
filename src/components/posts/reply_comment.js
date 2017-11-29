@@ -19,6 +19,7 @@ class ReplyComment extends Component{
 					{
 						post.data.replies &&
 											post.data.replies.data.children.map((reply,index)=>{
+												
 												if(!reply.data.body){
 													return ;
 												}
