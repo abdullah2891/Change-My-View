@@ -42,7 +42,7 @@ class PostView extends Component{
 							this.state.posts.map((post,index)=>{
 								let link = `/comment/${subreddit}/${post.data.id}`;
 								return(			
-										<li className="list-group-item" eventKey={post.data.id}><Link to={link}>{post.data.title}</Link></li>
+										<li className="list-group-item items" eventKey={post.data.id}><Link to={link}>{post.data.title}</Link></li>
 									)
 							})
 						}

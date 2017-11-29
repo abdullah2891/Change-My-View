@@ -3,7 +3,7 @@
   "name": "Change My View",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "cmv.png",
       "sizes": "192x192",
       "type": "image/png"
     }

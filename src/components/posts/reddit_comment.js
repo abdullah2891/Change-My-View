@@ -54,8 +54,8 @@ class RedditComment extends Component{
 						this.state.header.data ? 
 							(
 								<div>
-									<h1>{this.state.header.data.title} <Link  to='/'><i class="fa fa-backward" aria-hidden="true" /> </Link> </h1> 
-									<div className='well'>
+									<h1>{this.state.header.data.title} <Link  to='/'><i class="fa fa-arrow-left" title="back to main page" aria-hidden="true" /></Link> </h1> 
+									<div className='well items'>
 										{this.state.header.data.selftext}
 									</div>
 								</div>								
@@ -77,7 +77,7 @@ class RedditComment extends Component{
 									<div>	
 										<li className="list-group-item" eventKey={post.data.id}>{post.data.body}</li>
 
-										<ul className='list-group reddit-comment-group'>
+										<ul className='list-group reddit-comment-group items'>
 
 											<ReplyComment comment = {post} />
 										</ul>
